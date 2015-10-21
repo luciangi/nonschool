@@ -18,9 +18,13 @@
 </head>
 
 <body>
-<g:render template="/layouts/menu"/>
-<div class="container">
-    <g:layoutBody/>
+<div class="wrapper">
+    <g:render template="/layouts/menu"/>
+    <div class="container">
+        <g:layoutBody/>
+    </div>
+
+    <div class="push"></div>
 </div>
 <g:render template="/layouts/footer"/>
 <asset:javascript src="application.js"/>

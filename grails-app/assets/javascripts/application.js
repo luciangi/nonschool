@@ -12,12 +12,7 @@
 //= require_tree .
 //= require_self
 
-if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
-}
+$(document).ready(function () {
+	// This command is used to initialize some elements and make them work properly
+	$.material.init();
+});
