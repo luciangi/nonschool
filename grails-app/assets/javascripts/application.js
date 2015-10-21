@@ -6,6 +6,9 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
+//= require bootstrap
+//= require ripples.js
+//= require material.js
 //= require_tree .
 //= require_self
 
