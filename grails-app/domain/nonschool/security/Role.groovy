@@ -6,7 +6,11 @@ class Role implements Serializable {
 
     String authority
 
+    Role() {
+    }
+
     Role(String authority) {
+        this()
         this.authority = authority
     }
 

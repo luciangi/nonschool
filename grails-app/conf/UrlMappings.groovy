@@ -1,13 +1,14 @@
 class UrlMappings {
-
-	static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
+//------ default controller mapping ------
+    static mappings = {
+        "/$controller/$action?/$id?(.$format)?" {
             constraints {
                 // apply constraints here
             }
         }
-
-        "/"(view:"/index")
-        "500"(view:'/error')
-	}
+//------ landing page ------
+        "/"(controller: 'home', action: 'index')
+//------ error pages ------
+        "500"(view: '/error')
+    }
 }
