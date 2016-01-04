@@ -1,4 +1,5 @@
-<div class="navbar navbar-material-blue-grey">
+<% def activeLink = pageProperty(name: 'meta.nav').toString() %>
+<div class="navbar navbar-material-blue-700">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse"
                 data-target=".navbar-material-blue-grey-collapse">
@@ -6,44 +7,52 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="javascript:void(0)"><asset:image src="grails_logo.png" alt="Grails"
-                                                                       style="height: 100%"/></a>
+        <g:link controller="home" action="index" class="navbar-brand">
+            <asset:image src="grails_logo.png" alt="Grails" style="height: 100%"/>
+        </g:link>
     </div>
 
     <div class="navbar-collapse collapse navbar-material-blue-grey-collapse">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="javascript:void(0)">Active</a></li>
-            <li><a href="javascript:void(0)">Link</a></li>
-            <li class="dropdown">
-                <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle"
-                   data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">Action</a></li>
-                    <li><a href="javascript:void(0)">Another action</a></li>
-                    <li><a href="javascript:void(0)">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Dropdown header</li>
-                    <li><a href="javascript:void(0)">Separated link</a></li>
-                    <li><a href="javascript:void(0)">One more separated link</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <form class="navbar-form navbar-left">
-            <input type="text" class="form-control col-lg-8" placeholder="Search">
-        </form>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="javascript:void(0)">Link</a></li>
-            <li class="dropdown">
-                <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle"
-                   data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">Action</a></li>
-                    <li><a href="javascript:void(0)">Another action</a></li>
-                    <li><a href="javascript:void(0)">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="javascript:void(0)">Separated link</a></li>
-                </ul>
+            <sec:ifNotLoggedIn>
+                <li class="${activeLink.equals('login') ? 'active' : null}">
+                    <g:link controller="login" action="auth">
+                        <g:message code="layouts.menu.login.label"/>
+                    </g:link>
+                </li>
+                <li class="label-material-deep-purple-A200 ${activeLink.equals('signup') ? 'active' : null}">
+                    <g:link controller="signup" action="index">
+                        <strong>
+                            <g:message code="layouts.menu.signup.label"/>
+                        </strong>
+                    </g:link>
+                </li>
+            </sec:ifNotLoggedIn>
+            <sec:ifLoggedIn>
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <sec:username/>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">#My Profile</a></li>
+                        <li><a href="javascript:void(0)">#Settings</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <g:remoteLink controller="logout" method="post" asynchronous="false"
+                                          onSuccess="location.reload()">
+                                <g:message code="layouts.menu.logout.label"/>
+                            </g:remoteLink>
+                        </li>
+                    </ul>
+                </li>
+            </sec:ifLoggedIn>
+        </ul>
+        <ul class="nav navbar-nav">
+            <li class="${activeLink.equals('home') ? 'active' : null}">
+                <g:link controller="home" action="index">
+                    <g:message code="layouts.menu.home.label"/>
+                </g:link>
             </li>
         </ul>
     </div>

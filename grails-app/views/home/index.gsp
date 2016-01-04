@@ -10,6 +10,7 @@
 
 <head>
     <meta name="layout" content="main"/>
+    <meta name="nav" content="home"/>
 </head>
 
 <body>

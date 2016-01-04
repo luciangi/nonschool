@@ -122,14 +122,15 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'nonschool.securit
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'nonschool.security.UserRole'
 grails.plugin.springsecurity.authority.className = 'nonschool.security.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-        '/'              : ['permitAll'],
-        '/index'         : ['permitAll'],
-        '/index.gsp'     : ['permitAll'],
-        '/assets/**'     : ['permitAll'],
-        '/**/js/**'      : ['permitAll'],
-        '/**/css/**'     : ['permitAll'],
-        '/**/images/**'  : ['permitAll'],
-        '/**/favicon.ico': ['permitAll'],
-        '/home/**'       : ['permitAll']
+        '/'                 : ['permitAll'],
+        '/index'            : ['permitAll'],
+        '/index.gsp'        : ['permitAll'],
+        '/assets/**'        : ['permitAll'],
+        '/**/js/**'         : ['permitAll'],
+        '/**/css/**'        : ['permitAll'],
+        '/**/images/**'     : ['permitAll'],
+        '/**/favicon.ico'   : ['permitAll'],
+        '/home/**'          : ['permitAll'],
+        '/signup/**'        : ['permitAll']
 ]
 

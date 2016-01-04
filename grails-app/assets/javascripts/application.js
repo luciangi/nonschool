@@ -15,4 +15,11 @@
 $(document).ready(function () {
 	// This command is used to initialize some elements and make them work properly
 	$.material.init();
+
+	//This is used to dismiss alerts automatically
+	window.setTimeout(function () {
+		$(".alert").fadeTo(500, 0).slideUp(500, function () {
+			$(this).remove();
+		});
+	}, 8000);
 });

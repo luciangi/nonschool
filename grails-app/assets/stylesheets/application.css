@@ -29,3 +29,7 @@ html, body {
 .footer, .push {
     height: 50px; /* .push must be the same height as .footer */
 }
+
+label.control-label.control-label-black {
+    color: black;
+}

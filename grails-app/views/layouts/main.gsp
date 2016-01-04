@@ -21,6 +21,7 @@
 <div class="wrapper">
     <g:render template="/layouts/menu"/>
     <div class="container">
+        <g:render template="/layouts/alerts"/>
         <g:layoutBody/>
     </div>
 
