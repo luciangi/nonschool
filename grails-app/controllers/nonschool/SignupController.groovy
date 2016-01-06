@@ -13,7 +13,7 @@ class SignupController {
 
     def addNewUser() {
         if (StringUtils.isBlank(params.username)) {
-            flash.error = message(code: 'default.blank.error', args: ['Username'])
+            flash.error = message(code: 'signup.index.username.blank.error')
             return redirect(action: "index")
         }
         if (!params.password.equals(params.password_confirm)) {

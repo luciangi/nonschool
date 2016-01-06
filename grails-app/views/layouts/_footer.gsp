@@ -1,8 +1,9 @@
 <div class="footer">
     <div class="container">
-        <p class="muted credit">
-            Footer placeholder
-            <a href="http://google.ro">google</a>
-        </p>
+        <div class="row">
+            <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
+                <locale:selector/>
+            </div>
+        </div>
     </div>
 </div>
