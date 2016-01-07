@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lucian
-  Date: 1/3/2016
-  Time: 10:33 PM
---%>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 
@@ -16,15 +9,16 @@
 <body>
 <div class="jumbotron">
     <h2>
-        <g:message code="signup.index.title"/>
+        <g:message code="user.signup.title"/>
     </h2>
     <br/>
-    <g:form controller="signup" action="addNewUser" class="form-horizontal signup_form" method="POST">
+    <g:form controller="user" action="registerUser" class="form-horizontal signup_form" method="POST">
         <fieldset class="form-group-material-indigo-A200">
             <div class="form-group">
                 <label for="username" class="col-md-2 control-label control-label-black">
-                    <g:message code="signup.index.username.input.label"/>
+                    <g:message code="user.signup.username.input.label"/>
                 </label>
+
                 <div class="col-md-9">
                     <input type="text" class="form-control" id="username" name="username">
                 </div>
@@ -32,8 +26,9 @@
 
             <div class="form-group">
                 <label for="password" class="col-md-2 control-label control-label-black">
-                    <g:message code="signup.index.password.input.label"/>
+                    <g:message code="user.signup.password.input.label"/>
                 </label>
+
                 <div class="col-md-9">
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
@@ -41,8 +36,9 @@
 
             <div class="form-group">
                 <label for="password_confirm" class="col-md-2 control-label control-label-black">
-                    <g:message code="signup.index.password.confirm.input.label"/>
+                    <g:message code="user.signup.password.confirm.input.label"/>
                 </label>
+
                 <div class="col-md-9">
                     <input type="password" class="form-control" id="password_confirm" name="password_confirm">
                 </div>
@@ -51,10 +47,10 @@
             <div class="form-group">
                 <div class="col-md-10 col-md-offset-2">
                     <button type="button" class="btn btn-default" onclick="$('.signup_form')[0].reset();">
-                        <g:message code="signup.index.reset.btn.label"/>
+                        <g:message code="user.signup.reset.btn.label"/>
                     </button>
                     <button type="submit" class="btn btn-material-indigo-A200">
-                        <g:message code="signup.index.submit.btn.label"/>
+                        <g:message code="user.signup.submit.btn.label"/>
                     </button>
                 </div>
             </div>

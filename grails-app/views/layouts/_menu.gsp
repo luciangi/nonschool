@@ -29,7 +29,7 @@
                     </g:link>
                 </li>
                 <li class="label-material-indigo-A200 ${activeLink.equals('signup') ? 'active' : null}">
-                    <g:link controller="signup" action="index">
+                    <g:link controller="user" action="signup">
                         <strong>
                             <g:message code="layouts.menu.signup.label"/>
                         </strong>
@@ -38,12 +38,16 @@
             </sec:ifNotLoggedIn>
             <sec:ifLoggedIn>
                 <li class="dropdown">
-                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
                         <sec:username/>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:void(0)">#My Profile</a></li>
+                        <li class="${activeLink.equals('myProfile') ? 'active' : null}">
+                            <g:link controller="user" action="showProfile">
+                                <g:message code="layouts.menu.user.profile.label"/>
+                            </g:link>
+                        </li>
                         <li><a href="javascript:void(0)">#Settings</a></li>
                         <li class="divider"></li>
                         <li>
