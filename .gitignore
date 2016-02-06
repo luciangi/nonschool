@@ -31,6 +31,7 @@ hs_err_pid*
 /cobertura.ser
 .DS_Store
 /target/
+/classes/
 /web-app/plugins
 
 # web application files
