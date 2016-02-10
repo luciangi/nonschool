@@ -19,7 +19,7 @@
               method='POST' id='loginForm'
               autocomplete='off'>
             <div class="row">
-                <fieldset class="form-group-material-indigo-A200">
+                <fieldset class="form-group-material-deep-purple-A200">
                     <div class="form-group">
                         <label for="username" class="col-md-2 control-label control-label-black">
                             <g:message code="login.auth.username.input.label"/>
@@ -42,7 +42,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-9">
-                            <div class="togglebutton togglebutton-material-indigo-A200">
+                            <div class="togglebutton togglebutton-material-deep-purple-A200">
                                 <label>
                                     <input type="checkbox" id="remember_me"
                                            name='${rememberMeParameter}'
@@ -54,7 +54,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-offset-2 col-md-9">
-                            <button type="submit" id="submit" class="btn btn-material-indigo-A200">
+                            <button type="submit" id="submit" class="btn btn-material-deep-purple-A200">
                                 <g:message code="login.auth.submit.btn.label"/>
                             </button>
                         </div>

@@ -39,7 +39,7 @@
 
     <div class="row">
         <div class="col-md-2 col-md-offset-10">
-            <g:link controller="user" action="editProfile" class="btn btn-material-indigo-A200 btn-fab">
+            <g:link controller="user" action="editProfile" class="btn btn-material-deep-purple-A200 btn-fab">
                 <span style="vertical-align: 10px" class="glyphicon glyphicon-pencil"></span>
             </g:link>
         </div>

@@ -13,7 +13,7 @@
     </h2>
     <br/>
     <g:form controller="user" action="registerUser" class="form-horizontal signup_form" method="POST">
-        <fieldset class="form-group-material-indigo-A200">
+        <fieldset class="form-group-material-deep-purple-A200">
             <div class="form-group">
                 <label for="username" class="col-md-2 control-label control-label-black">
                     <g:message code="user.signup.username.input.label"/>
@@ -49,7 +49,7 @@
                     <button type="button" class="btn btn-default" onclick="$('.signup_form')[0].reset();">
                         <g:message code="user.signup.reset.btn.label"/>
                     </button>
-                    <button type="submit" class="btn btn-material-indigo-A200">
+                    <button type="submit" class="btn btn-material-deep-purple-A200">
                         <g:message code="user.signup.submit.btn.label"/>
                     </button>
                 </div>

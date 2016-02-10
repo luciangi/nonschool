@@ -16,6 +16,9 @@
 
 html, body {
     height: 100%;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: white;
 }
 
 /*wrapper and push for sticky footer*/
