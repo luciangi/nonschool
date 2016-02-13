@@ -13,6 +13,14 @@ class User implements Serializable {
     boolean accountLocked
     boolean passwordExpired
 
+//    profile info
+    String firstName
+    String lastName
+    String nickname
+    String email
+    Date birthdate
+    String occupation
+
     User() {
     }
 

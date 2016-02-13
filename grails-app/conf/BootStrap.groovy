@@ -18,6 +18,13 @@ class BootStrap {
 
     def adminUserInit() {
         User adminUser = new User("admin", "admin")
+        adminUser.firstName = "firstName"
+        adminUser.lastName = "lastName"
+        adminUser.nickname = "nickname"
+        adminUser.email = "email@email.com"
+        adminUser.birthdate = new Date()
+        adminUser.occupation = "occupation"
+
         Role adminRole = new Role("ROLE_ADMIN")
         adminUser.save(flush: true)
         adminRole.save(flush: true)

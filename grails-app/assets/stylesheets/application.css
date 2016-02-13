@@ -18,7 +18,6 @@ html, body {
     height: 100%;
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: 100% 100%;
-    color: white;
 }
 
 /*wrapper and push for sticky footer*/
@@ -35,4 +34,40 @@ html, body {
 
 label.control-label.control-label-black {
     color: black;
+}
+
+.card-image.profile-background-img {
+    height: 140px;
+}
+
+.card-body .row {
+    margin: 0 0 10px;
+}
+
+.card-profile-image {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 120px;
+    margin-top: -60px;
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.padding-left .row {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.padding-right .row {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
 }

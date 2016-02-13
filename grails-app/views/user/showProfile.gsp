@@ -7,45 +7,89 @@
 </head>
 
 <body>
-<div class="jumbotron">
-    <h2>
-        <g:message code="user.showprofile.title"/>
-    </h2>
-    <br/>
 
-    <div class="row">
-        <div class="col-md-offset-1 col-md-10">
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="card">
+            <div class="card-image profile-background-img">
+                <g:img uri="${resource(dir: "images", file: "temp_image.png")}"/>
+            </div>
 
-            <div class="list-group">
-                <div class="list-group-item">
-                    <div class="row-picture">
-                        <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
-                    </div>
-
-                    <div class="row-content">
-                        <h4 class="list-group-item-heading">
-                            ${currentUser.username}
-                        </h4>
-
-                        <p class="list-group-item-text">#email</p>
-                    </div>
+            <div class="card-body" style="text-align: center">
+                <g:img class="card-profile-image" uri="${resource(dir: "images", file: "temp_avatar.png")}"/>
+                %{--<div class="btn-group-sm pull-right">--}%
+                %{--<a class="btn btn-fab btn-group-sm"><span style="vertical-align: 10px" class="glyphicon glyphicon-pencil"></span></a>--}%
+                %{--</div>--}%
+                <div class="row">
+                    <h2>${currentUser.username}</h2>
                 </div>
-
-                <div class="list-group-separator"></div>
-                <br/>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col-md-2 col-md-offset-10">
-            <g:link controller="user" action="editProfile" class="btn btn-material-deep-purple-A200 btn-fab">
-                <span style="vertical-align: 10px" class="glyphicon glyphicon-pencil"></span>
-            </g:link>
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="col-md-6 padding-right">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3>Profile Info</h3>
+                        </div>
+
+                        <div class="row">
+                            <label>Name</label>
+                            <h4>${currentUser.firstName} ${currentUser.lastName}</h4>
+                        </div>
+
+                        <div class="row">
+                            <label>Nickname</label>
+                            <h4>${currentUser.nickname}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3>Contact</h3>
+                        </div>
+
+                        <div class="row">
+                            <label>Email</label>
+                            <h4>${currentUser.email}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 padding-left">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3>Birthdate and occupation</h3>
+                        </div>
+
+                        <div class="row">
+                            <label>Birthdate</label>
+                            <h4><g:formatDate format="${g.message(code: "default.date.format")}"
+                                              date="${currentUser.birthdate.clearTime()}"/></h4>
+                        </div>
+
+                        <div class="row">
+                            <label>Occupation</label>
+                            <h4>${currentUser.occupation}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <br/>
-    <br/>
 </div>
 </body>
 </html>

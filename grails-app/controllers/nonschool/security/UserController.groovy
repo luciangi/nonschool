@@ -12,14 +12,9 @@ class UserController {
     def signup() {}
 
     def showProfile() {
-        [currentUser: SecurityContextHolder.getContext().getAuthentication().getPrincipal()]
+        [currentUser: User.findById(SecurityContextHolder.getContext().getAuthentication().getPrincipal().id)]
     }
 
-    def editProfile() {
-        [currentUser: SecurityContextHolder.getContext().getAuthentication().getPrincipal()]
-    }
-
-    @Transactional
     def registerUser() {
         if (StringUtils.isBlank(params.username)) {
             flash.error = message(code: 'user.signup.username.blank.error')
@@ -45,3 +40,4 @@ class UserController {
     }
 
 }
+
