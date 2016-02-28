@@ -39,12 +39,13 @@ class BootStrap {
 
         Item item = new Item()
         item.title = 'Bullshit'
-        item.resourceList.push(resource)
+        item.addToResourceList(resource)
         item.save(flush: true, failOnError: true)
 
         Course course = new Course()
         course.title = 'Bulshit'
-        course.itemList.push(item)
+        course.addToItemList(item)
         course.save(flush: true, failOnError: true)
+        ///course.itemList.push(item)
     }
 }

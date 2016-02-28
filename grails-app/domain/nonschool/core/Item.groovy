@@ -28,7 +28,7 @@ class Item {
 
     List<Resource> resourceList = []
 
-    static belongsTo = [Course]
+    static belongsTo = [User, Course]
     static hasMany = [resourceList: Resource, courseList: Course]
 
     static mapping = {

@@ -32,8 +32,9 @@ class Course {
         id(generator: "uuid2", type: "uuid-binary", length: 16)
     }
 
-    static belongsTo = [owner: User]
+    static belongsTo = [User]
     static hasMany = [itemList: Item]
+    static mappedBy = [itemList: "courseList"]
     static constraints = {
     }
 }
