@@ -135,6 +135,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/user/signup'      : ['!isAuthenticated()'],
         '/user/showProfile' : ['isAuthenticated()'],
         '/user/editProfile' : ['isAuthenticated()'],
+        '/course/**'        : ['isAuthenticated()'],
+        '/item/**'          : ['isAuthenticated()'],
 ]
 
 // This sets the default of all fields to nullable, blank(able)
