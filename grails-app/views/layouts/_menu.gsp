@@ -1,5 +1,4 @@
 <g:set var="activeLink" value="${pageProperty(name: 'meta.nav').toString()}"/>
-%{--<div class="navbar navbar-material-blue-700">--}%
 <div class="navbar navbar-material-blue-grey-700">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -8,17 +7,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="javascript:void(0)">
+        <g:link class="navbar-brand" controller="home" action="index">
+            <i class="glyphicon glyphicon-play"></i>
             NonSchool
-            %{--<asset:image src="grails_logo.png" alt="Grails" style="height: 100%"/>--}%
-        </a>
+            <i class="glyphicon glyphicon-forward"></i>
+        </g:link>
     </div>
 
     <div class="navbar-collapse collapse navbar-material-blue-grey-collapse">
         <ul class="nav navbar-nav">
-            <li class="${activeLink.equals('home') ? 'active' : null}">
-                <g:link controller="home" action="index">
-                    <g:message code="layouts.menu.home.label"/>
+            <li class="${controllerName.equals('course') && actionName.equals('index') ? 'active' : null}">
+                <g:link controller="course" action="index">
+                    <g:message code="course.list.public.label"/>
                 </g:link>
             </li>
         </ul>
