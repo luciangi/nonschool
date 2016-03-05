@@ -33,19 +33,20 @@ class BootStrap {
     }
 
     def generateData() {
-        Resource resource = new Resource()
-        resource.name = 'cacademaca'
-        resource.save(flush: true, failOnError: true)
-
         Item item = new Item()
-        item.title = 'Bullshit'
-        item.addToResourceList(resource)
+        item.title = "Djikstra's Algorithm"
+        item.description = "A short summary and implementation example of how to find shortcuts where there are none."
         item.save(flush: true, failOnError: true)
 
         Course course = new Course()
-        course.title = 'Bulshit'
-        course.addToItemList(item)
+        course.title = 'Graph Theory'
+        course.description = "A basic introduction the world of nodes and edges"
         course.save(flush: true, failOnError: true)
-        ///course.itemList.push(item)
+
+        Course course2 = new Course()
+        course2.title = 'Artificial Intelligence'
+        course2.description = "A beginner's guide to the exciting endeavour to create HAL"
+        course2.save(flush: true, failOnError: true)
+
     }
 }
