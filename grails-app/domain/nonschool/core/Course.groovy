@@ -20,6 +20,7 @@ class Course {
 
     String title
     String description
+    Integer duration
 
     User owner
 

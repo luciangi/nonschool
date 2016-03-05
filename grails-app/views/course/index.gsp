@@ -27,18 +27,18 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="list-group col-lg-6 col-md-6">
-						<g:each in="${courseInstanceList}" status="i" var="courseInstance">
+						<g:each in="${courseInstanceList}" status="i" var="course">
 							<g:if test="${i%2==0}">
-                                <g:link controller="course" action="show" params="[id: courseInstance?.id]">
+                                <g:link controller="course" action="show" params="[id: course?.id]">
                                     <div class="list-group-item">
                                         <div class="row-picture">
                                             <i class="glyphicon glyphicon-book"></i>
                                         </div>
                                         <div class="row-content">
-                                            <div class="least-content">15m</div>
-                                            <h2 class="list-group-item-heading">${courseInstance?.title}</h2>
+                                            <div class="least-content">${course?.duration?.intdiv(60)}h ${course?.duration % 60}m</div>
+                                            <h2 class="list-group-item-heading">${course?.title}</h2>
 
-                                            <p class="list-group-item-text">${courseInstance?.description}</p>
+                                            <p class="list-group-item-text">${course?.description}</p>
                                         </div>
                                     </div>
                                 </g:link>
@@ -49,18 +49,18 @@
 						</g:each>
 						</div>
 						<div class="list-group col-lg-6 col-md-6">
-							<g:each in="${courseInstanceList}" status="i" var="courseInstance">
+							<g:each in="${courseInstanceList}" status="i" var="course">
 								<g:if test="${i%2!=0}">
-                                    <g:link controller="course" action="show" params="[id: courseInstance?.id]">
+                                    <g:link controller="course" action="show" params="[id: course?.id]">
                                         <div class="list-group-item">
                                             <div class="row-picture">
                                                 <i class="glyphicon glyphicon-book"></i>
                                             </div>
                                             <div class="row-content">
-                                                <div class="least-content">15m</div>
-                                                <h2 class="list-group-item-heading">${courseInstance?.title}</h2>
+                                                <div class="least-content">${course?.duration?.intdiv(60)}h ${course?.duration % 60}m</div>
+                                                <h2 class="list-group-item-heading">${course?.title}</h2>
 
-                                                <p class="list-group-item-text">${courseInstance?.description}</p>
+                                                <p class="list-group-item-text">${course?.description}</p>
                                             </div>
                                         </div>
                                     </g:link>

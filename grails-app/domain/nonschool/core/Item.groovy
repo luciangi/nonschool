@@ -20,6 +20,7 @@ class Item {
     String title
     String description
     String htmlTemplate
+    Integer duration
 
     User owner
 
