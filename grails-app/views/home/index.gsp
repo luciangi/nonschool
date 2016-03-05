@@ -3,6 +3,7 @@
 
 <head>
     <meta name="layout" content="main"/>
+    <meta name="nav" content="home"/>
     <title>Landing Page</title>
 </head>
 

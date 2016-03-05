@@ -16,7 +16,7 @@
 
     <div class="navbar-collapse collapse navbar-material-blue-grey-collapse">
         <ul class="nav navbar-nav">
-            <li class="${controllerName.equals('course') && actionName.equals('index') ? 'active' : null}">
+            <li class="${activeLink.equals('allCourses') ? 'active' : null}">
                 <g:link controller="course" action="index">
                     <g:message code="course.list.public.label"/>
                 </g:link>

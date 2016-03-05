@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+        <meta name="nav" content="allCourses"/>
 		<title><g:message code="course.list.public.label"/></title>
 	</head>
 	<body>
