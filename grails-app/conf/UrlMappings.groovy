@@ -10,5 +10,6 @@ class UrlMappings {
         "/"(controller: 'home', action: 'index')
 //------ error pages ------
         "500"(view: '/error')
+        "404"(view: '/errors/404')
     }
 }

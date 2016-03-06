@@ -17,6 +17,10 @@ class CourseController {
     }
 
     def show(Course courseInstance) {
+        if (courseInstance == null) {
+            response.sendError(404)
+            return
+        }
         respond courseInstance
     }
 
@@ -27,7 +31,7 @@ class CourseController {
     @Transactional
     def save(Course courseInstance) {
         if (courseInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
 
@@ -49,7 +53,7 @@ class CourseController {
 
     def edit(Course courseInstance) {
         if (courseInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
         respond courseInstance
@@ -58,7 +62,7 @@ class CourseController {
     @Transactional
     def update(Course courseInstance) {
         if (courseInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
 
@@ -82,7 +86,7 @@ class CourseController {
     def delete(Course courseInstance) {
 
         if (courseInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
 
@@ -94,16 +98,6 @@ class CourseController {
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'course.label', default: 'Course'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*'{ render status: NOT_FOUND }
         }
     }
 }

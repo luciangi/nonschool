@@ -8,9 +8,11 @@
 
 <body>
 <div class="jumbotron">
-    <h2>
-        <g:message code="user.signup.title"/>
-    </h2>
+    <div class="row">
+        <h2 class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+            <g:message code="user.signup.title"/>
+        </h2>
+    </div>
     <br/>
     <g:form controller="register" action="registerUser" class="form-horizontal signup_form" method="POST">
         <fieldset class="form-group-material-deep-purple-A200">

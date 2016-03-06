@@ -16,6 +16,10 @@ class ItemController {
     }
 
     def show(Item itemInstance) {
+        if (itemInstance == null) {
+            response.sendError(404)
+            return
+        }
         respond itemInstance
     }
 
@@ -26,7 +30,7 @@ class ItemController {
     @Transactional
     def save(Item itemInstance) {
         if (itemInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
 
@@ -53,7 +57,7 @@ class ItemController {
     @Transactional
     def update(Item itemInstance) {
         if (itemInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
 
@@ -77,7 +81,7 @@ class ItemController {
     def delete(Item itemInstance) {
 
         if (itemInstance == null) {
-            notFound()
+            response.sendError(404)
             return
         }
 
@@ -89,16 +93,6 @@ class ItemController {
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'item.label', default: 'Item'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NOT_FOUND }
         }
     }
 }
