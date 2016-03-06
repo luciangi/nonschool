@@ -78,7 +78,7 @@
                         <div class="row">
                             <label>Birthdate</label>
                             <h4><g:formatDate format="${g.message(code: "default.date.format")}"
-                                              date="${currentUser.birthdate.clearTime()}"/></h4>
+                                              date="${currentUser?.birthdate?.clearTime()}"/></h4>
                         </div>
 
                         <div class="row">

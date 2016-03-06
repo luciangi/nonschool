@@ -131,10 +131,10 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/images/**'     : ['permitAll'],
         '/**/favicon.ico'   : ['permitAll'],
         '/home/**'          : ['permitAll'],
-        '/user/registerUser': ['!isAuthenticated()'],
-        '/user/signup'      : ['!isAuthenticated()'],
+        '/register/**'      : ['!isAuthenticated()'],
         '/user/showProfile' : ['isAuthenticated()'],
         '/user/editProfile' : ['isAuthenticated()'],
+        '/user/**'          : ['isAuthenticated()'],
         '/course/**'        : ['isAuthenticated()'],
         '/item/**'          : ['isAuthenticated()'],
 ]

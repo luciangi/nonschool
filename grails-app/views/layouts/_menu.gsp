@@ -31,7 +31,7 @@
                     </g:link>
                 </li>
                 <li class="label-material-deep-purple-A200 ${activeLink.equals('signup') ? 'active' : null}">
-                    <g:link controller="user" action="signup">
+                    <g:link controller="register" action="signup">
                         <strong>
                             <g:message code="layouts.menu.signup.label"/>
                         </strong>
