@@ -21,6 +21,11 @@
                     <g:message code="course.list.public.label"/>
                 </g:link>
             </li>
+            <li class="${activeLink.equals('allItems') ? 'active' : null}">
+                <g:link controller="item" action="index">
+                    <g:message code="item.list.public.label"/>
+                </g:link>
+            </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
