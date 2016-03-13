@@ -25,8 +25,7 @@
                 <g:link controller="item" action="index">
                     <g:message code="item.list.public.label"/>
                 </g:link>
-            </li>
-        </ul>
+            </li></ul>
 
         <ul class="nav navbar-nav navbar-right">
             <sec:ifNotLoggedIn>
@@ -44,18 +43,17 @@
                 </li>
             </sec:ifNotLoggedIn>
             <sec:ifLoggedIn>
-                <li class="dropdown">
+                <li class="dropdown ${activeLink.equals('profile') ? 'active' : null}">
                     <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
                         <sec:username/>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="${activeLink.equals('myProfile') ? 'active' : null}">
-                            <g:link controller="user" action="showProfile">
+                        <li class="${activeLink.equals('profile') ? 'active' : null}">
+                            <g:link controller="user" action="profile">
                                 <g:message code="layouts.menu.user.profile.label"/>
                             </g:link>
                         </li>
-                        <li><a href="javascript:void(0)">#Settings</a></li>
                         <li class="divider"></li>
                         <li>
                             <g:remoteLink controller="logout" method="post" asynchronous="false"
