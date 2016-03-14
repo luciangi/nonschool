@@ -9,6 +9,7 @@
 *
 *= require bootstrap
 *= require roboto.css
+*= require material.css
 *= require material-fullpalette.css
 *= require ripples.css
 *= require bootstrap-material-datetimepicker.css

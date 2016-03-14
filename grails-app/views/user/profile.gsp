@@ -23,11 +23,9 @@
                 </div>
 
                 <div class="col-md-2">
-                    <div class="btn-group-sm pull-right">
-                        <button class="btn btn-fab btn-group-sm" data-toggle="modal" data-target="#usernameModal">
-                            <span style="vertical-align: 10px" class="glyphicon glyphicon-pencil"></span>
-                        </button>
-                    </div>
+                    <button class="btn btn-fab btn-group-sm btn-material-deep-purple-A200" data-toggle="modal" data-target="#usernameModal">
+                        <span style="vertical-align: 10px" class="glyphicon glyphicon-pencil"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -46,13 +44,11 @@
                                 </div>
 
                                 <div class="col-md-2">
-                                    <div class="btn-group-sm pull-right">
-                                        <button class="btn btn-fab btn-group-sm" data-toggle="modal"
-                                                data-target="#infoModal">
-                                            <span style="vertical-align: 10px"
-                                                  class="glyphicon glyphicon-pencil"></span>
-                                        </button>
-                                    </div>
+                                    <button class="btn btn-fab btn-group-sm btn-material-deep-purple-A200" data-toggle="modal"
+                                            data-target="#infoModal">
+                                        <span style="vertical-align: 10px"
+                                              class="glyphicon glyphicon-pencil"></span>
+                                    </button>
                                 </div>
                             </div>
 
@@ -85,13 +81,11 @@
                                 </div>
 
                                 <div class="col-md-2">
-                                    <div class="btn-group-sm pull-right">
-                                        <button class="btn btn-fab btn-group-sm" data-toggle="modal"
-                                                data-target="#contactModal">
-                                            <span style="vertical-align: 10px"
-                                                  class="glyphicon glyphicon-pencil"></span>
-                                        </button>
-                                    </div>
+                                    <button class="btn btn-fab btn-group-sm btn-material-deep-purple-A200" data-toggle="modal"
+                                            data-target="#contactModal">
+                                        <span style="vertical-align: 10px"
+                                              class="glyphicon glyphicon-pencil"></span>
+                                    </button>
                                 </div>
                             </div>
 
@@ -119,13 +113,11 @@
                                 </div>
 
                                 <div class="col-md-2">
-                                    <div class="btn-group-sm pull-right">
-                                        <button class="btn btn-fab btn-group-sm" data-toggle="modal"
-                                                data-target="#birthdateModal">
-                                            <span style="vertical-align: 10px"
-                                                  class="glyphicon glyphicon-pencil"></span>
-                                        </button>
-                                    </div>
+                                    <button class="btn btn-fab btn-group-sm btn-material-deep-purple-A200" data-toggle="modal"
+                                            data-target="#birthdateModal">
+                                        <span style="vertical-align: 10px"
+                                              class="glyphicon glyphicon-pencil"></span>
+                                    </button>
                                 </div>
                             </div>
 

@@ -3,14 +3,15 @@
         <div class="modal-content">
             <g:form url="[resource: currentUser, action: 'update']" class="form-horizontal" method="PUT">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                            class="glyphicon glyphicon-remove"></span></button>
                     <h4 class="modal-title"><g:message code="user.profile.username.title"/></h4>
                 </div>
 
                 <div class="modal-body">
                     <fieldset class="form-group-material-deep-purple-A200">
                         <div class="form-group">
-                            <div class="col-md-12">
+                            <div class="col-md-offset-1 col-md-10">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label for="username" class="control-label control-label-black">
@@ -46,14 +47,15 @@
         <div class="modal-content">
             <g:form url="[resource: currentUser, action: 'update']" class="form-horizontal" method="PUT">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                            class="glyphicon glyphicon-remove"></span></button>
                     <h4 class="modal-title"><g:message code="user.profile.info.title"/></h4>
                 </div>
 
                 <div class="modal-body">
                     <fieldset class="form-group-material-deep-purple-A200">
                         <div class="form-group">
-                            <div class="col-md-12">
+                            <div class="col-md-offset-1 col-md-10">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label for="firstName" class="control-label control-label-black">
@@ -115,14 +117,15 @@
         <div class="modal-content">
             <g:form url="[resource: currentUser, action: 'update']" class="form-horizontal" method="PUT">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                            class="glyphicon glyphicon-remove"></span></button>
                     <h4 class="modal-title"><g:message code="user.profile.birthdate.title"/></h4>
                 </div>
 
                 <div class="modal-body">
                     <fieldset class="form-group-material-deep-purple-A200">
                         <div class="form-group">
-                            <div class="col-md-12">
+                            <div class="col-md-offset-1 col-md-10">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label for="birthdate" class="control-label control-label-black">
@@ -172,14 +175,15 @@
         <div class="modal-content">
             <g:form url="[resource: currentUser, action: 'update']" class="form-horizontal" method="PUT">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                            class="glyphicon glyphicon-remove"></span></button>
                     <h4 class="modal-title"><g:message code="user.profile.contact.title"/></h4>
                 </div>
 
                 <div class="modal-body">
                     <fieldset class="form-group-material-deep-purple-A200">
                         <div class="form-group">
-                            <div class="col-md-12">
+                            <div class="col-md-offset-1 col-md-10">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label for="email" class="control-label control-label-black">
