@@ -9,17 +9,19 @@
 //= require bootstrap
 //= require ripples.js
 //= require material.js
+//= require moment-with-locales.min.js
+//= require bootstrap-material-datetimepicker.js
 //= require_tree .
 //= require_self
 
 $(document).ready(function () {
-	// This command is used to initialize some elements and make them work properly
-	$.material.init();
+    // This command is used to initialize some elements and make them work properly
+    $.material.init();
 
-	//This is used to dismiss alerts automatically
-	window.setTimeout(function () {
-		$(".alert").fadeTo(500, 0).slideUp(500, function () {
-			$(this).remove();
-		});
-	}, 8000);
+    //This is used to dismiss alerts automatically
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 8000);
 });

@@ -131,38 +131,26 @@
                                     </div>
 
                                     <div class="col-md-9">
-                                        %{--FIXME: change to datepicker tag lib when it is ready--}%
-                                        <input type="date" class="form-control" id="birthdate" name="birthdate"
-                                               value="${currentUser.birthdate}" required>
-                                        %{--<script>--}%
-                                        %{--$(function () {--}%
-                                        %{--$('#birthdate').bootstrapMaterialDatePicker({--}%
-                                        %{--weekStart: 0,--}%
-                                        %{--time: false,--}%
-                                        %{--clearButton: true,--}%
-                                        %{--maxDate: new Date(),--}%
-                                        %{--format: 'DD-MM-YYYY'--}%
-                                        %{--});--}%
-                                        %{--});--}%
-                                        %{--</script>--}%
-                                        %{--</div>--}%
+                                        <non:datePicker name="birthdate" value="${currentUser.birthdate}"
+                                                        class="form-control" maxDate="new Date()" clearButton="true"/>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <label for="occupation" class="control-label control-label-black">
-                                                <g:message code="user.profile.occupation.label"/>
-                                            </label>
-                                        </div>
-
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control" id="occupation" name="occupation"
-                                                   value="${currentUser.occupation}" required>
-                                        </div>
-                                    </div>
-
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="occupation" class="control-label control-label-black">
+                                            <g:message code="user.profile.occupation.label"/>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="occupation" name="occupation"
+                                               value="${currentUser.occupation}" required>
+                                    </div>
+                                </div>
+
                             </div>
+                        </div>
                     </fieldset>
                 </div>
 
