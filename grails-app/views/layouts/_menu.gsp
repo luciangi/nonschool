@@ -31,6 +31,7 @@
             <sec:ifNotLoggedIn>
                 <li class="${activeLink.equals('login') ? 'active' : null}">
                     <g:link controller="login" action="auth">
+                        <i class="glyphicon glyphicon-log-in"></i>&nbsp;
                         <g:message code="layouts.menu.login.label"/>
                     </g:link>
                 </li>
@@ -51,6 +52,7 @@
                     <ul class="dropdown-menu">
                         <li class="${activeLink.equals('profile') ? 'active' : null}">
                             <g:link controller="user" action="profile">
+                                <i class="glyphicon glyphicon-user"></i>&nbsp;
                                 <g:message code="layouts.menu.user.profile.label"/>
                             </g:link>
                         </li>
@@ -58,6 +60,7 @@
                         <li>
                             <g:remoteLink controller="logout" method="post" asynchronous="false"
                                           onSuccess="location.reload()">
+                                <i class="glyphicon glyphicon-log-out"></i>&nbsp;
                                 <g:message code="layouts.menu.logout.label"/>
                             </g:remoteLink>
                         </li>
