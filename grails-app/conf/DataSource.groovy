@@ -27,8 +27,15 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+            driverClassName = 'com.mysql.jdbc.Driver'
+            dialect = MySQL5InnoDBDialect
+            String host = System.getenv('OPENSHIFT_MYSQL_DB_HOST')
+            String port = System.getenv('OPENSHIFT_MYSQL_DB_PORT')
+            String dbName = System.getenv('OPENSHIFT_APP_NAME')
+            url = "jdbc:mysql://$host:$port/$dbName"
+            username = System.getenv('OPENSHIFT_MYSQL_DB_USERNAME')
+            password = System.getenv('OPENSHIFT_MYSQL_DB_PASSWORD')
         }
     }
     production {
