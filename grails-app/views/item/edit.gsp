@@ -29,9 +29,9 @@
 			</g:hasErrors>
 			<g:form url="[resource:itemInstance, action:'update']" method="PUT" >
 				<g:hiddenField name="version" value="${itemInstance?.version}" />
-				<fieldset class="form">
+				%{--<fieldset class="form">--}%
 					<g:render template="form"/>
-				</fieldset>
+				%{--</fieldset>--}%
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 				</fieldset>
