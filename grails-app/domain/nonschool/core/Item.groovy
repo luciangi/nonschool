@@ -1,5 +1,6 @@
 package nonschool.core
 
+import nonschool.classification.LearningObjective
 import nonschool.security.User
 
 /**
@@ -26,6 +27,8 @@ class Item {
 
     Boolean published = false
     Boolean communityEdit = false
+
+    LearningObjective learningObjective
 
     List<Resource> resourceList = []
 

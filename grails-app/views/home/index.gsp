@@ -15,9 +15,6 @@
             <div class="row" style="text-align: center">
                 <h1><g:message code="home.welcome.title"/></h1>
             </div>
-            <br/>
-            <br/>
-            <br/>
 
             <div class="row">
                 <h4><g:message code="home.welcome.desciption.first"/></h4>
@@ -99,28 +96,6 @@
                             </p>
                         </div>
                     </div>
-
-                    <div class="list-group-separator"></div>
-
-                    <div class="list-group-item">
-                        <div class="row-action-primary">
-                            <g:link uri="https://github.com/iluci/nonSchool">
-                                <g:img uri="${resource(dir: "images", file: "github_logo.png")}"
-                                       style="background: white"/>
-                            </g:link>
-                        </div>
-
-                        <div class="row-content">
-                            <h4 class="list-group-item-heading"><g:message code="home.appdetails.github.title"/></h4>
-
-                            <p class="list-group-item-text">
-                                <g:message code="home.appdetails.github.description"/>
-                                <g:link uri="https://github.com/iluci/nonSchool"><g:message
-                                        code="home.appdetails.here"/></g:link>.
-                            </p>
-                        </div>
-                    </div>
-
                     <div class="list-group-separator"></div>
                 </div>
             </div>

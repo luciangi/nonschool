@@ -7,7 +7,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title><g:layoutTitle default="NonSchool"/></title>
+    <title><g:layoutTitle default="nSchool"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     %{--TODO: change icon--}%
     %{--<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">--}%

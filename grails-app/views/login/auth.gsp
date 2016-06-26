@@ -11,7 +11,7 @@
     <div class="row">
         <h2 style="text-align: center">
             <i class="glyphicon glyphicon-play"></i>
-            NonSchool
+            nSchool
             <i class="glyphicon glyphicon-forward"></i>
         </h2>
     </div>
@@ -49,7 +49,7 @@
                             <label for="password" class="control-label control-label-black">
                                 <g:message code="login.auth.password.input.label"/>
                             </label>
-                            <input type="text" class="form-control" id="password" name="j_password" required>
+                            <input type="password" class="form-control" id="password" name="j_password" required>
                         </div>
                     </div>
 

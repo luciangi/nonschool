@@ -9,7 +9,7 @@
         </button>
         <g:link class="navbar-brand" controller="home" action="index">
             <i class="glyphicon glyphicon-play"></i>
-            NonSchool
+            nSchool
             <i class="glyphicon glyphicon-forward"></i>
         </g:link>
     </div>
