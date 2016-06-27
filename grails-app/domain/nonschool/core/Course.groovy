@@ -27,8 +27,6 @@ class Course {
     Boolean published = false
     Boolean communityEdit = false
 
-    List<Item> itemList = []
-
     static mapping = {
         id(generator: "uuid2", type: "uuid-binary", length: 16)
     }

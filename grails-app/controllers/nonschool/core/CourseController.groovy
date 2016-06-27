@@ -13,7 +13,11 @@ class CourseController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Course.list(params), model:[courseInstanceCount: Course.count()]
+        List<Course> courses = Course.list(params)
+        if(params.keySet().contains('searchCriteria')){
+            courses = courseService.searchCourses(params['searchCriteria'].toString())
+        }
+        respond courses, model:[courseInstanceCount: courses.size()]
     }
 
     def show(Course courseInstance) {
@@ -44,7 +48,7 @@ class CourseController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'course.label', default: 'Course'), courseInstance.id])
+                flash.success = message(code: 'course.created.message', args: [courseInstance.title])
                 redirect courseInstance
             }
             '*' { respond courseInstance, [status: CREATED] }
@@ -75,7 +79,7 @@ class CourseController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Course.label', default: 'Course'), courseInstance.id])
+                flash.success = message(code: 'course.updated.message', args: [courseInstance.title])
                 redirect courseInstance
             }
             '*'{ respond courseInstance, [status: OK] }
@@ -94,7 +98,7 @@ class CourseController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Course.label', default: 'Course'), courseInstance.id])
+                flash.success = message(code: 'course.deleted.message', args: [courseInstance.title])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }

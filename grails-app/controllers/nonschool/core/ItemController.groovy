@@ -56,7 +56,7 @@ class ItemController {
 
         request.withFormat {
             form multipartForm {
-                flash.success = message(code: 'item.created.message', args: [itemInstance.id])
+                flash.success = message(code: 'item.created.message', args: [itemInstance.title])
                 redirect itemInstance
             }
             '*' { respond itemInstance, [status: CREATED] }
@@ -83,7 +83,7 @@ class ItemController {
 
         request.withFormat {
             form multipartForm {
-                flash.success = message(code: 'item.updated.message', args: [itemInstance.id])
+                flash.success = message(code: 'item.updated.message', args: [itemInstance.title])
                 redirect itemInstance
             }
             '*' { respond itemInstance, [status: OK] }
@@ -98,11 +98,15 @@ class ItemController {
             return
         }
 
+        itemInstance.courseList.each {
+            it.removeFromItemList(itemInstance)
+            it.save(flush: true)
+        }
         itemInstance.delete flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.success = message(code: 'item.deleted.message', args: [itemInstance.id])
+                flash.success = message(code: 'item.deleted.message', args: [itemInstance.title])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }

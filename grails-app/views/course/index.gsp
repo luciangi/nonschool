@@ -14,10 +14,24 @@
 				<div class="card-body">
 					<div class="row">
 						<h1 class="col-md-4 col-lg-4"><g:message code="course.list.public.label"/></h1>
-                        <div class="form-group col-md-4 col-lg-4">
-                            <br/>
-                            <input class="form-control input-lg" id="searchCriteria" name="searchCriteria" type="text" placeholder="Search...">
-                        </div>
+						<g:form name="course_search_form" action="index" controller="course">
+							<div class="form-group col-md-4 col-lg-4">
+								<input class="form-control input-lg" id="searchCriteria" name="searchCriteria" type="text" placeholder="Search..."
+									   value="${params['searchCriteria']}">
+							</div>
+							<div class="form-group col-md-4 col-lg-4">
+								<g:submitButton class="btn btn-material-deep-purple-A200" name="course_search" value="${message(code:'course.search.label')}"/>
+							</div>
+						</g:form>
+					</div>
+					<div class="row">
+						<g:link action="create" controller="course" >
+							<button class="btn btn-fab btn-group-sm btn-material-deep-purple-A200">
+								<span style="vertical-align: 10px" class="glyphicon glyphicon-plus">
+								</span>
+							</button>
+						</g:link>
+
 					</div>
 				</div>
 			</div>
