@@ -4,7 +4,7 @@ package nonschool.core
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class ItemController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -18,6 +18,14 @@ class ItemController {
         }
         items = itemService.sortByBloomSpiral(items)
         respond items, model: [itemInstanceCount: items.size()]
+    }
+
+    def addToCourse(Item itemInstance){
+        if(!params.keySet().contains('courseId'))return;
+        Course course = Course.findById(params['courseId'])
+        course.addToItemList(itemInstance)
+        course.save(flush: true, failOnError: true)
+        redirect controller: 'course', action: 'show', params: [id: course.id]
     }
 
     def show(Item itemInstance) {

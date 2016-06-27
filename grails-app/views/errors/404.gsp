@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main">
-    <title>That's a Fail... | Kyle W. Banks</title>
+    <title>404</title>
 </head>
 <body>
     <div class="card">

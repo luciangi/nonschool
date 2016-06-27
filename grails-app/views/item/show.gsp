@@ -1,5 +1,5 @@
 
-<%@ page import="nonschool.core.Item" %>
+<%@ page import="nonschool.core.Course; nonschool.core.Item" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,6 +19,14 @@
                     <h1>${itemInstance.title}</h1>
 
                     <h3><g:fieldValue bean="${itemInstance}" field="description"/></h3>
+                    <g:form url="[resource:itemInstance, action:'addToCourse']" method="POST">
+                        <g:select from="${Course.list()}"
+                                  optionKey="id"
+                                  optionValue="title"
+                                  noSelection="['null': '']"
+                                  name="courseId"/>
+                        <g:actionSubmit class="btn btn-material-deep-purple-A200" action="addToCourse" value="${message(code:'item.button.addToCourse.label', default:'Edit')}"/>
+                    </g:form>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
 					<div class="row">
 						<h1><g:message code="item.create.label"/></h1>
 						<g:hasErrors bean="${itemInstance}">
-							<ul class="errors" role="alert">
+							<ul class="errors alert-danger" role="alert">
 								<g:eachError bean="${itemInstance}" var="error">
 									<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
 								</g:eachError>

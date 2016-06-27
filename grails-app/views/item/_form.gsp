@@ -47,6 +47,7 @@
 			<g:select from="${LearningObjective.list()}"
 					  optionKey="id"
 					  optionValue="name"
+					  noSelection="['null': '']"
 					  name="learningObjective.id" class="form-control" value="${itemInstance?.learningObjective?.id}"/>
 
 		</div>
