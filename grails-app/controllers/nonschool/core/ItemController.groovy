@@ -12,7 +12,12 @@ class ItemController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Item.list(params), model: [itemInstanceCount: Item.count()]
+        List<Item> items = Item.list(params)
+        if(params.keySet().contains('searchCriteria')){
+            items = itemService.searchItems(params['searchCriteria'].toString())
+        }
+        items = itemService.sortByBloomSpiral(items)
+        respond items, model: [itemInstanceCount: items.size()]
     }
 
     def show(Item itemInstance) {
@@ -43,7 +48,7 @@ class ItemController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'item.label', default: 'Item'), itemInstance.id])
+                flash.success = message(code: 'item.created.message', args: [itemInstance.id])
                 redirect itemInstance
             }
             '*' { respond itemInstance, [status: CREATED] }
@@ -70,7 +75,7 @@ class ItemController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Item.label', default: 'Item'), itemInstance.id])
+                flash.success = message(code: 'item.updated.message', args: [itemInstance.id])
                 redirect itemInstance
             }
             '*' { respond itemInstance, [status: OK] }
@@ -89,7 +94,7 @@ class ItemController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Item.label', default: 'Item'), itemInstance.id])
+                flash.success = message(code: 'item.deleted.message', args: [itemInstance.id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }

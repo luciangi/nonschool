@@ -21,7 +21,7 @@ class ItemService {
     }
 
     List<Item> sortByBloomSpiral(Collection<Item> items){
-        List<Item> results = items.toList().sort {it.learningObjective.knowledge}.sort {it.learningObjective.cognitive}
+        List<Item> results = items.toList().sort {it.learningObjective.cognitive}.sort {it.learningObjective.knowledge}
         return results
     }
 

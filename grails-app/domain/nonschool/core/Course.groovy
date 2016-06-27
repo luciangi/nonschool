@@ -37,5 +37,8 @@ class Course {
     static hasMany = [itemList: Item]
     static mappedBy = [itemList: "courseList"]
     static constraints = {
+        duration nullable: false
+        title nullable: false, blank: false
+        description nullable: false, blank: false
     }
 }
